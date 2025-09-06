@@ -5,7 +5,7 @@ import Preloader from "../../components/preloader/Preloader";
 class Main extends React.Component {
     state = { movies: [] };
     componentDidMount() {
-        fetch('http://omdbapi.com/?apikey=cbeeaf27&s=harry_potter')
+        fetch('https://omdbapi.com/?apikey=cbeeaf27&s=harry_potter')
         .then(response => response.json())
         .then(data => this.setState({movies: data.Search}));
 
