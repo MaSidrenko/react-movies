@@ -2,6 +2,8 @@
     flex-basis: 300px;
     margin: 20px;
     box-shadow:  1px 1px 4px 2px #CCC;
+    height: 600px;
+    width: 1000px;
 }
 
 .card div {

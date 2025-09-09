@@ -15,7 +15,7 @@ class Seacrh extends React.Component {
                 <div className="search">
                     <input
                         type="search"
-                        placeholder="ВВедите название фильма"
+                        placeholder="Введите название фильма"
                         value={this.state.search}
                         onChange={(e) => this.setState({ search: e.target.value })}
                         onKeyDown={this.handleKey}
