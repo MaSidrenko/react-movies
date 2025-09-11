@@ -12,13 +12,13 @@ class Seacrh extends React.Component {
         this.setState
             (
                 () => (this.state.page > 1 ? { page: this.state.page - 1 } : { page: 1 }),
-                () => { this.props.searchMovie(this.state.search, this.state.type, this.state.page) }
+                () => { this.props.searchMovie(this.state.search === "" ? "harry_potter" : this.state.search, this.state.type, this.state.page) }
             )
     }
     nextPage = () => {
         this.setState(
             () => ({ page: this.state.page + 1 }),
-            () => { this.props.searchMovie(this.state.search, this.state.type, this.state.page) }
+            () => { this.props.searchMovie(this.state.search === "" ? "harry_potter" : this.state.search, this.state.type, this.state.page) }
         )
     }
     handleKey = (e) => {
@@ -34,7 +34,7 @@ class Seacrh extends React.Component {
     setPage = (num) => {
         this.setState(
             () => ({ page: num }),
-            () => { this.props.searchMovie(this.state.search, this.state.type, this.state.page); }
+            () => { this.props.searchMovie(this.state.search === "" ? "harry_potter" : this.state.search , this.state.type, this.state.page); }
         );
     }
     render() {
